@@ -4,7 +4,9 @@
     return textbooks.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 }
  */
-
+/**
+ * 
+ * 
 function sorter(textbooks) {
     // Custom sorting algorithm without using built-in methods
     for (let i = 0; i < textbooks.length - 1; i++) {
@@ -43,3 +45,21 @@ function compareStringsIgnoreCase(str1, str2) {
 }
 
 module.exports = sorter;
+
+ * 
+ */
+
+
+function sorter(textbooks) {
+    return textbooks.sort((a, b)=>{
+      const bA = a.toLowerCase()
+      const bB = b.toLowerCase()
+      if(bA < bB){
+        return -1;
+        }
+      if(bA > bB){
+        return 1;
+        }
+      return 0
+    });
+  }
